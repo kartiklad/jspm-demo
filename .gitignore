@@ -1,0 +1,6 @@
+# Build artefacts
+jspm_packages
+node_modules
+build.*
+vendor.*
+npm-debug.log
