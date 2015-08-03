@@ -1,4 +1,20 @@
 {
+  "name": "jspm-demo",
+  "version": "1.0.0",
+  "description": "Demonstrating use of CommonJS, AMD and ES6 modules and bundling techniques with JSPM",
+  "main": "config.js",
+  "scripts": {
+    "serve": "serve",
+    "build": "jspm bundle react + jquery + lodash vendor.js && jspm bundle app/main - react - jquery - lodash build.js",
+    "buildSfx": "jspm bundle-sfx app/main",
+    "devMode": "jspm unbundle"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jspm": "^0.15.7",
+    "serve": "^1.4.0"
+  },
   "jspm": {
     "directories": {},
     "dependencies": {
@@ -11,16 +27,5 @@
       "babel-runtime": "npm:babel-runtime@^5.1.13",
       "core-js": "npm:core-js@^0.9.4"
     }
-  },
-  "name": "livedemo",
-  "version": "1.0.0",
-  "main": "config.js",
-  "scripts": {
-    "serve": "serve",
-    "build": "jspm bundle react + jquery + lodash vendor.js && jspm bundle app/main - react - jquery - lodash build.js",
-    "buildSfx": "jspm bundle-sfx app/main",
-    "devMode": "jspm unbundle"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }
